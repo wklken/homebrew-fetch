@@ -5,20 +5,20 @@
 class Httptest < Formula
   desc ""
   homepage "https://github.com/wklken/homebrew-httptest"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.3/httptest_1.0.3_darwin_amd64.tar.gz"
-      sha256 "838800fc2dfaf2b4e6e62c95bbb16c0e2fd530d931a7fa08740b1e9f9b4a8f89"
+    if Hardware::CPU.arm?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_darwin_arm64.tar.gz"
+      sha256 "06a2dc4ce678d8553ae83d240feb945105fbd08d039b186c1b9e1bf0d3e25347"
 
       def install
         bin.install "httptest"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.3/httptest_1.0.3_darwin_arm64.tar.gz"
-      sha256 "74dc3f0fb91546e8b3266d9ec60013cf6c3980642c2826b9a85a51d6d88aebe7"
+    if Hardware::CPU.intel?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_darwin_amd64.tar.gz"
+      sha256 "36c9dd8b61c4190ee3d0e956014fec3a651e528967f88a55761cd98cc9fa4542"
 
       def install
         bin.install "httptest"
@@ -27,17 +27,17 @@ class Httptest < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.3/httptest_1.0.3_linux_amd64.tar.gz"
-      sha256 "47c58eecbd975f8effdd3c66d19a302b00fdbc4e81537a8d341264ccfbbf6445"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_linux_arm64.tar.gz"
+      sha256 "5e50f0259cda101e93de290c8b23d0982685cf31bb417e28a1cf5ba62d2435f5"
 
       def install
         bin.install "httptest"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.3/httptest_1.0.3_linux_arm64.tar.gz"
-      sha256 "53138d641f653b30503b5f103345a61bae111ad908318499f9fcaa763a394746"
+    if Hardware::CPU.intel?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_linux_amd64.tar.gz"
+      sha256 "f2a33d66aae9435328e82d1d0db105e2f5d70f4967e3091591366304434cdc97"
 
       def install
         bin.install "httptest"
