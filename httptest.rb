@@ -5,20 +5,20 @@
 class Httptest < Formula
   desc ""
   homepage "https://github.com/wklken/homebrew-httptest"
-  version "1.0.4"
+  version "1.0.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_darwin_arm64.tar.gz"
-      sha256 "06a2dc4ce678d8553ae83d240feb945105fbd08d039b186c1b9e1bf0d3e25347"
+    if Hardware::CPU.intel?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_darwin_amd64.tar.gz"
+      sha256 "1b093b8f2fae547f1def7ddeb4c5d62ebe0a6a58272b577bbc3223228aa2689d"
 
       def install
         bin.install "httptest"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_darwin_amd64.tar.gz"
-      sha256 "36c9dd8b61c4190ee3d0e956014fec3a651e528967f88a55761cd98cc9fa4542"
+    if Hardware::CPU.arm?
+      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_darwin_arm64.tar.gz"
+      sha256 "029c9b68168f123b5ea0d82b943a0e0bbc7b78270fc4e8dda51112ae2f25001c"
 
       def install
         bin.install "httptest"
@@ -28,16 +28,16 @@ class Httptest < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_linux_arm64.tar.gz"
-      sha256 "5e50f0259cda101e93de290c8b23d0982685cf31bb417e28a1cf5ba62d2435f5"
+      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_linux_arm64.tar.gz"
+      sha256 "975e94b48b76413728e03be08ebc3406fa041c46ab43b6fb0699572b782161c9"
 
       def install
         bin.install "httptest"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.4/httptest_1.0.4_linux_amd64.tar.gz"
-      sha256 "f2a33d66aae9435328e82d1d0db105e2f5d70f4967e3091591366304434cdc97"
+      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_linux_amd64.tar.gz"
+      sha256 "0b78f368a597e1d7c47e5bf59eb6c59233bb600654080fffab75f826c7527035"
 
       def install
         bin.install "httptest"
