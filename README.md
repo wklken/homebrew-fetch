@@ -1,10 +1,10 @@
-# homebrew-httptest
+# homebrew-fetch
 
-Homebrew formula for installing wklken/httptest.
+Homebrew formula for installing wklken/fetch.
 
 ## How To Use
 
 ```bash
-brew tap wklken/httptest
-brew install httptest
+brew tap wklken/fetch
+brew install fetch
 ```
