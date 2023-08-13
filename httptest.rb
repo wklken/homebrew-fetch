@@ -5,42 +5,42 @@
 class Httptest < Formula
   desc ""
   homepage "https://github.com/wklken/homebrew-httptest"
-  version "1.0.5"
+  version "1.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_darwin_amd64.tar.gz"
-      sha256 "1b093b8f2fae547f1def7ddeb4c5d62ebe0a6a58272b577bbc3223228aa2689d"
+      url "https://github.com/wklken/fetch/releases/download/v1.0.6/fetch_1.0.6_darwin_amd64.tar.gz"
+      sha256 "612ba05372b60a5d7c5480c61f44e1b814a437b6b4a64bbbb60f9fe1699e0614"
 
       def install
-        bin.install "httptest"
+        bin.install "fetch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_darwin_arm64.tar.gz"
-      sha256 "029c9b68168f123b5ea0d82b943a0e0bbc7b78270fc4e8dda51112ae2f25001c"
+      url "https://github.com/wklken/fetch/releases/download/v1.0.6/fetch_1.0.6_darwin_arm64.tar.gz"
+      sha256 "a597265d69177eab4331142e6d166e6ecf9689e4e2faff4ebfbf375559b38acc"
 
       def install
-        bin.install "httptest"
+        bin.install "fetch"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_linux_arm64.tar.gz"
-      sha256 "975e94b48b76413728e03be08ebc3406fa041c46ab43b6fb0699572b782161c9"
+    if Hardware::CPU.intel?
+      url "https://github.com/wklken/fetch/releases/download/v1.0.6/fetch_1.0.6_linux_amd64.tar.gz"
+      sha256 "4190e5dc1ff22fbdfcb50cfb3d6672eac213d986abd3a45b6967dc5c2802fe14"
 
       def install
-        bin.install "httptest"
+        bin.install "fetch"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wklken/httptest/releases/download/v1.0.5/httptest_1.0.5_linux_amd64.tar.gz"
-      sha256 "0b78f368a597e1d7c47e5bf59eb6c59233bb600654080fffab75f826c7527035"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wklken/fetch/releases/download/v1.0.6/fetch_1.0.6_linux_arm64.tar.gz"
+      sha256 "8cac31c0b9ca1211fc08ce28443fec424f35964012ff1523e496959076871b77"
 
       def install
-        bin.install "httptest"
+        bin.install "fetch"
       end
     end
   end
