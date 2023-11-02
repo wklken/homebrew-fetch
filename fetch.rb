@@ -5,20 +5,20 @@
 class Fetch < Formula
   desc ""
   homepage "https://github.com/wklken/homebrew-fetch"
-  version "1.0.8"
+  version "1.0.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wklken/fetch/releases/download/v1.0.8/fetch_1.0.8_darwin_amd64.tar.gz"
-      sha256 "484e571d0227da53fa7e774ddb275f816d3b64b9533846ce7e9e522a69197da8"
+      url "https://github.com/wklken/fetch/releases/download/v1.0.9/fetch_1.0.9_darwin_amd64.tar.gz"
+      sha256 "2ece26e2709d1f5fce331fcd6d707b7b448247f71a3df1f560246576727d77da"
 
       def install
         bin.install "fetch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wklken/fetch/releases/download/v1.0.8/fetch_1.0.8_darwin_arm64.tar.gz"
-      sha256 "0faf2fe71ce4f226f74ecc31f525619fd8a42ac2ed1020d943b777480ec42f89"
+      url "https://github.com/wklken/fetch/releases/download/v1.0.9/fetch_1.0.9_darwin_arm64.tar.gz"
+      sha256 "1a128dd8557abf4c23ee90fbb9169d1655f163afc8854ba6e85cef5866c5d11d"
 
       def install
         bin.install "fetch"
@@ -27,17 +27,17 @@ class Fetch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/wklken/fetch/releases/download/v1.0.8/fetch_1.0.8_linux_amd64.tar.gz"
-      sha256 "388257540459144d1e4d6612f14b949ba167f8a5541e81d774ad94f5ac983372"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wklken/fetch/releases/download/v1.0.9/fetch_1.0.9_linux_arm64.tar.gz"
+      sha256 "030b109e279b0990fa7aa3564ea5292ae2268cb18465438045c2b5081e74e7ef"
 
       def install
         bin.install "fetch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wklken/fetch/releases/download/v1.0.8/fetch_1.0.8_linux_arm64.tar.gz"
-      sha256 "fbacfe046a0580ccb71ce84487cf7ec14c011af827fc218ea6695a8b9d36a1d3"
+    if Hardware::CPU.intel?
+      url "https://github.com/wklken/fetch/releases/download/v1.0.9/fetch_1.0.9_linux_amd64.tar.gz"
+      sha256 "a82beb46ae8d2b3001ef85f73a683afd404ebafbff9e4407cfe6ea99dd1e120b"
 
       def install
         bin.install "fetch"
